@@ -3,7 +3,6 @@ SciPy
 matplotlib
 pandas
 tensorflow
-matplotlib
 scikit-learn
 jieba
 gensim

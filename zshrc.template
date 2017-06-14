@@ -49,13 +49,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras gitignore svn node npm brew osx zsh-syntax-highlighting tmux)
+plugins=(git git-extras gitignore svn node npm zsh-syntax-highlighting tmux)
 
 # User configuration
-export AndroidSDK=$HOME/Library/Android/sdk
-export MySqlWorkbenchHome=/Applications/MySQLWorkbench.app/Contents/MacOS
-export AppleReporterDir="/usr/local/lib/AppleReporter"
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.gem/ruby/2.0.0/bin:$AndroidSDK/tools:$AndroidSDK/platform-tools:$MySqlWorkbenchHome:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,4 +89,5 @@ export SVN_EDITOR="vi"
 # alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST)' 'tcp and port 80'"
 
 alias python=python3
+alias pip=pip3
 
