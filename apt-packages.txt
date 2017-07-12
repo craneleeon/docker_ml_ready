@@ -8,3 +8,4 @@ openssl
 pkg-config
 curl
 wget
+vim
