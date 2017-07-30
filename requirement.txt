@@ -2,7 +2,7 @@ numpy
 SciPy
 matplotlib
 pandas
-tensorflow
+tensorflow-gpu
 scikit-learn
 jieba
 gensim

@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 
+FROM nvidia/cuda
 # ENV LANG en_US.UTF-8  
 ENV SHELL /bin/bash
 
