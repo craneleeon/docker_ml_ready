@@ -1,28 +1,32 @@
-FROM nvidia/cuda
+# FROM nvidia/cuda
+# FROM nvidia/cuda:8.0-cudnn5-runtime-ubuntu16.04
+FROM gcr.io/tensorflow/tensorflow:latest-gpu-py3
 # ENV LANG en_US.UTF-8  
 ENV SHELL /bin/bash
 
 RUN apt-get update -y && apt-get install build-essential -y
 COPY apt-packages.txt /tmp/
 COPY requirement.txt /tmp/
+# COPY cuda/include/cudnn.h /usr/local/cuda/include
+# COPY cuda/lib64/libcudnn* /usr/local/cuda/lib64
 RUN xargs -a /tmp/apt-packages.txt apt-get install -y
 RUN echo "alias python=python3" >> ~/.bashrc
 RUN echo "alias pip=pip3" >> ~/.bashrc
-RUN pip3 install --upgrade pip && pip3 install -r /tmp/requirement.txt
+RUN pip3 install --upgrade pip && pip3 install --upgrade -r /tmp/requirement.txt
 
 # RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # COPY zshrc.template ~/.zshrc
 
-RUN mkdir -p /notebooks
-VOLUME /notebooks
-WORKDIR /notebooks
+# RUN mkdir -p /notebooks
+# VOLUME /notebooks
+# WORKDIR /notebooks
 
 # Tensor Board
-EXPOSE 6006
+# EXPOSE 6006
 # Jupiter
-EXPOSE 8888
+# EXPOSE 8888
 # Jupyter has issues with being run directly:
 #   https://github.com/ipython/ipython/issues/7062
 # We just add a little wrapper script.
-COPY run_jupyter.sh /
-CMD ["/run_jupyter.sh", "--allow-root", "--no-browser", "--ip=0.0.0.0"]
+# COPY run_jupyter.sh /
+# CMD ["/run_jupyter.sh", "--allow-root", "--no-browser", "--ip=0.0.0.0"]

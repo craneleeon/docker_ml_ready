@@ -4,6 +4,7 @@ python3-pip
 python3-wheel
 git
 build-essential
+libcupti-dev
 openssl
 pkg-config
 curl
