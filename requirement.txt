@@ -1,10 +1,7 @@
 numpy
-SciPy
 matplotlib
 pandas
 tensorflow
 scikit-learn
 jieba
 gensim
-jupyter
-Pillow
