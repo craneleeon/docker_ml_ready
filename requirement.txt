@@ -3,6 +3,3 @@ scipy
 matplotlib
 scikit-learn
 pandas
-jieba
-gensim
-tensorflow-gpu
