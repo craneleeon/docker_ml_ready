@@ -1,3 +1,4 @@
+# craneleeon/docker_ml_ready
 FROM tensorflow/tensorflow:latest-py3
 # ENV LANG en_US.UTF-8  
 ENV SHELL /bin/bash
